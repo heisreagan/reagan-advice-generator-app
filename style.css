@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{   
+/* ### Primary */
+--LightCyan: hsl(193, 38%, 86%);
+--NeonGreen: hsl(150, 100%, 66%);
+
+/* ### Neutral */
+--GrayishBlue: hsl(217, 19%, 38%);
+--DarkGrayishBlue: hsl(217, 19%, 24%);
+--DarkBlue: hsl(218, 23%, 16%);
+}
+
+body{
+    background-color: var(--DarkGrayishBlue);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding-inline: 1.6rem;
+    /* overflow: hidden; */
+}
+
+.container{
+    font-family: "Manrope", sans-serif;
+    width: 100%;
+    max-width: 540px;
+    /* grid: max-content 3.2rem / 1fr; */
+}
+.advice-output {
+    background: var(--GrayishBlue);
+    padding: 4rem 2.4rem 6.4rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+    border-radius: 15px;
+}
+
+.advice-number{
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.345714rem;
+    color: var(--NeonGreen);
+}
+
+@media screen and (min-width: 545px) {
+    .advice-number{
+        letter-spacing: 0.408571rem;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    } 
+}
+
+.advice-quote {
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 3.3rem;
+    letter-spacing: -0.0257143rem;
+    color: var(--LightCyan);
+}
+
+@media screen and (min-width: 545px){
+    .advice-quote {
+        margin-bottom: 1.6rem;
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+        letter-spacing: -0.03rem;
+    } 
+}
+
+/* .advice-divider {
+    display: flex;
+    width: 100%;
+} */
+
+picture > img {
+    margin: auto;
+    width: 100%;
+}
+
+.advice-btn {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: var(--NeonGreen);
+    grid-row: 2/3;
+    grid-column: 1/2;
+    border: none;
+    display: grid;
+    place-self: end center;
+    transition: box-shadow 250ms;
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
+
+.advice-btn img {
+    /* transform: translateY(50%);  */
+    margin: 32px;
+    width: 2rem;
+    transition: transform 250ms;
+}
+
+.advice-btn:hover {
+    box-shadow: 0px 0px 20px var(--NeonGreen);
+}
+
+.advice-btn img:hover {
+    transform: rotate(135deg);
+}
